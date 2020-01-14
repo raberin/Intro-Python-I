@@ -22,3 +22,7 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+
+def calendar_func(year=2019, month='january'):
+    return
