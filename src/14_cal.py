@@ -23,6 +23,13 @@ import sys
 import calendar
 from datetime import datetime
 
+program_name = sys.argv[0]
+c = calendar.TextCalendar(calendar.SUNDAY)
 
-def calendar_func(year=2019, month='january'):
-    return
+if len(sys.argv) == 3:
+    print(c.formatmonth(int(sys.argv[2]), int(sys.argv[1])))
+elif len(sys.argv) == 2:
+    print(c.formatmonth(datetime.now().year, int(sys.argv[1])))
+else:
+    date = datetime.now()
+    print(c.formatmonth(date.year, date.month))
